@@ -34,6 +34,8 @@
     }
 
     //el if se puede usar con una comparativa o compuesto
+        // &&: es un "y", se tienen que complir todas las condiciones
+        // ||: es un "o", se tienen que complir al menos una de las condiciones
 
     if($age > 18 && $age < 60 ){
         echo "Eres mayor de edad";
