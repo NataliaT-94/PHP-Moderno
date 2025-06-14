@@ -5,7 +5,7 @@
     //2 es la condición que se tiene que cumplir para que esto se esté repitiendo.
     //3 es qué pasa cuando termino la repetición?
 
-    for($i = 0; $i < 10; $i + 1){
+    for($i = 0; $i < 10; $i ++){
         echo $i;
     }
 
