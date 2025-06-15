@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);//declaramos un tipado estricto
+
 //Class:Una clase te permite crear objetos y el objeto es una estructura de datos, una colección de información, llamada propiedades, y comportamientos, llamadas metodos
 
 //-------- Sin Constructor -------------
@@ -19,19 +21,25 @@ echo Sale::$count;//accedemos por fuera
 
 Sale::reset();//llamamos al metodp estatico
  
-$sale->createInvoice();
+echo $sale->createInvoice();
 
 
 class Sale{//clase
-    public $total;
-    public $date;
+    public float $total;
+    public string $date;
+    public array $concepts;
     public static $count;//propiedad estatica
 
-    public function __construct($total, $date)//le podemos asignar nosotros parámetros que van a ser obligados a utilizarse al momento que se crea el objeto.
+    public function __construct(float $total, string $date)//le podemos asignar nosotros parámetros que van a ser obligados a utilizarse al momento que se crea el objeto.
     {
         $this->total = $total;//le asignamos propiedades a los parametros
         $this->date = $date;
+        $this->concepts = [];
         self::$count++;//accedemos a la propiedad estatica de forma interna
+    }
+
+    public function addConcept(Concept $concept){
+        $this->concepts[] = $concept;
     }
 
     public static function reset(){//metodo statico
@@ -43,8 +51,19 @@ class Sale{//clase
         echo "Se a eliminado el objeto";
     }
 
-    public function createInvoice(){//Metodo
-        echo "Se crea la factura";
+    public function createInvoice(): string{//Metodo
+        return "Se crea la factura";
+    }
+}
+
+class Concept{
+    public string $descripcion;
+    public float $amount;
+
+    public function __construct(string $descripcion, float $amount)
+    {
+        $this->descripcion = $descripcion;
+        $this->amount = $amount;
     }
 }
 
@@ -53,5 +72,7 @@ class Sale{//clase
 //destructor: Estos se ejecutan al momento que tu objeto ha sido dejado de utilizarse (Cuando se acaba el script). También cuando reemplazas el objeto, tu variable por otro nuevo objeto y sobre todo si es un objeto entre una función y esta función termina el destructor se invoca en automático, tu no lo invocas. Solamente puede existir una vez, pero el destructor no puede recibir parámetros y tampoco retorna información.
 
 //Metodos y propiedades estaticos: Pertenece a la class y no al object.
+
+
 
 ?>
