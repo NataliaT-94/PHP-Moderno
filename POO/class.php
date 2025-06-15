@@ -16,6 +16,9 @@ $sale->createInvoice();
 //Constructores: es un tipo   de metodo especial. Para que yo obligue en la creación del objeto utilizando la clase que tenga que existir algo. Si no existe ese algo, no puedo crear el objeto.
 
 $sale = new Sale(10.5, date("Y-m-d"));
+$concept = new Concept("cerveza", 10);
+
+$sale->addConcept($concept);
 
 echo Sale::$count;//accedemos por fuera
 
@@ -60,7 +63,7 @@ class Concept{
     public string $descripcion;
     public float $amount;
 
-    public function __construct(string $descripcion, float $amount)
+    public function __construct(string $descripcion, float|int|string $amount)//union type
     {
         $this->descripcion = $descripcion;
         $this->amount = $amount;
@@ -72,6 +75,9 @@ class Concept{
 //destructor: Estos se ejecutan al momento que tu objeto ha sido dejado de utilizarse (Cuando se acaba el script). También cuando reemplazas el objeto, tu variable por otro nuevo objeto y sobre todo si es un objeto entre una función y esta función termina el destructor se invoca en automático, tu no lo invocas. Solamente puede existir una vez, pero el destructor no puede recibir parámetros y tampoco retorna información.
 
 //Metodos y propiedades estaticos: Pertenece a la class y no al object.
+
+//Union type: El modo tipo de unión sirve para poder trabajar con distintos tipos. se pueden colocar en cualquier orden
+
 
 
 
