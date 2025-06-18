@@ -12,4 +12,20 @@ $beer->alcohol = 8.5;
 $beer->name = "Erdinger Pikantus";//modificamos el valor
 echo $beer->name;
 
+// --------------- Convercion de objetos a array --------------------
+
+$arr = (array) $beer;//utilizamos los parentesis para asignarle el tipo
+
+echo $arr["alcohol"];
+
+// --------------- Convercion de array a objetos --------------------
+
+$arrLocation = [
+    "address" => "Calle del Mal #15",
+    "country" => "Mexico"
+];
+
+$objLocation = (object) $arrLocation;
+
+echo $objLocation->country;
 ?>
