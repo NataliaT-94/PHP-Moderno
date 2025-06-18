@@ -1,6 +1,7 @@
 <?php 
 
 //Polimorfismo Interfaces: Esto sirve para la arquitectura de software para que tu puedas reemplazar comportamientos simplemente yendo a un lugar y todo el comportamiento que puede ser muy simple o muy complejo, muy complejo y parecido, se sustituye de manera muy fácil sin que alteres cosas ya hechas. Esta función depende de una abstracción.
+//Abstraccion: Una abstracción es indicar una acción que se hace más no como se hace. cómo se hace quien lo hace son las clases que implementan.
 
 interface GetInfo{
     public function getInfo(): string;
