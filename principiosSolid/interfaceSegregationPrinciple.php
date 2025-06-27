@@ -86,6 +86,6 @@ function get(CrudBaseInterface $crud){
 }
 
 general(new UserCrud());
-get(new SaleCrud()),
+get(new SaleCrud());
 // update(new SaleCrud());
 ?>
