@@ -25,8 +25,8 @@ $toUpper =fn ($s) => strtoupper($s);//transforma en mayuscula
 $replaceSpace = fn($s) => str_replace(" ", "", $s);//elimina los espacios vacios
 $replaceNumbers = fn($s) => preg_replace('/\d+/u', '', $s);//elimina los numeros
 
-$myPipe = pipe($toUpper, $replaceSpace, $replaceNumbers);
+$myPipe = pipe($toUpper, $replaceSpace, $replaceNumbers);//Se va ir ejecutando las funciones una tras otra
 $result = $myPipe("abcd ef891 gh");
-echo $result;
+echo $result;//ABCDEFGH se muestra en pantalla
 
 ?>
