@@ -6,13 +6,13 @@
 
 
 interface IStragegy{
-    public function get(): array;
+    public function get(): array;//es una interfaz que nos obliga a crear
 }
 
 class ArrayStrategy implements IStragegy{
     private array $data = ["Titulo 1", "Titulo 2", "Titulo 3"];
 
-    public function get(): array
+    public function get(): array //cumplimos con la implementacion de la interfaz
     {
         return $this->data;
     }
@@ -41,7 +41,7 @@ class InfoPrinter{
     }
     
     public function print(){
-        $content = $this->strategy->get();
+        $content = $this->strategy->get();//content contiene al array
         foreach($content as $item){
             echo $item."<br>";
         }
