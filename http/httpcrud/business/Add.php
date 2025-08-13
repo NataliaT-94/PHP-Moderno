@@ -4,7 +4,7 @@
 
 namespace app\business;
 
-use app\exceptions\ValidatorException;
+use app\exceptions\ValidationException;
 use app\interfaces\RepositoryInterface;
 use app\interfaces\ValidatorInterface;
 
@@ -19,7 +19,7 @@ class Add{
 
     public function add($data){
         if(!$this->validator->validateAdd($data)){//si no es valido
-            throw new ValidatorException($this->validator->getError());//recibimos el mensaje de error correspondiente
+            throw new ValidationException($this->validator->getError());//recibimos el mensaje de error correspondiente
         }
 
         $this->repository->create($data);//si es valido mandamos la informacion al metodo crear

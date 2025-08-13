@@ -2,7 +2,7 @@
 require_once __DIR__ . '/autoload.php';
 
 use\exceptions\DataException;
-use\exceptions\ValidatorException;
+use\exceptions\ValidationException;
 
 try{
 
@@ -25,7 +25,7 @@ try{
             break;
     }
 
-}catch(ValidatorException $e){ 
+}catch(ValidationException $e){ 
     http_response_code(400);//la informacion es erronea o falta enviar informacion
     echo json_encode(['error' => $e->getMessage()]);
 }catch(DataException $e){//agregamos otro catch para categorizar las dataExceptions 
