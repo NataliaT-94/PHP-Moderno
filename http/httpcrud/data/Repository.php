@@ -32,13 +32,24 @@ class Repository implements RepositoryInterface{
 
     public function update($data){
         foreach ($this->db as $key => $item) {//recorremos sus valores y su key
-            if($item["id"] == $data['id']){//cuando el valor del id de la iteracion es igual al se igual al id de la informacion que recibimos
+            if($item['id'] == $data['id']){//cuando el valor del id de la iteracion es igual al se igual al id de la informacion que recibimos
                 $this->db[$key] = $data;//sustituimos el key por la nueva data que recibimos
                 file_put_contents($this->fileData, json_encode($this->db));
             }
         }
         return false;
-    }
+    } 
+
+    public function delete($id){
+        foreach ($this->db as $key => $item) {
+            if($item['id'] == $id){
+                unset($this->db[$key])//eliminamos el elemento que con el id igual al que recibimos del delete
+                $this->bd = array_values($this->db);//reordena los indices para que sean unicos
+                file_put_contents($this->fileData, json_encode($this->db));
+            }
+        }
+        return false;
+    } 
 
     public function exists(int $id): bool{
         foreach ($this->db as $item) {
