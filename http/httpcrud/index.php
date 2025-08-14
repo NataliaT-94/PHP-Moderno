@@ -1,6 +1,5 @@
 <?php 
-require_once __DIR__ . '/autoload.php';
-
+require_once __DIR__.'/autoload.php';
 use app\business\Add;
 use app\business\Get;
 use app\business\Update;

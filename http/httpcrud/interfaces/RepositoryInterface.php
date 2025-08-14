@@ -9,7 +9,7 @@ interface RepositoryInterface{
     public function get(): array;
     public function update($data);
     public function delete(int $id);
-    public function exist(int $id): bool;//definimos si existe un id
+    public function exists(int $id): bool;//definimos si existe un id
 }
 
 

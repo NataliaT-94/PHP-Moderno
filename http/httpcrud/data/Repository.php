@@ -43,7 +43,7 @@ class Repository implements RepositoryInterface{
     public function delete($id){
         foreach ($this->db as $key => $item) {
             if($item['id'] == $id){
-                unset($this->db[$key])//eliminamos el elemento que con el id igual al que recibimos del delete
+                unset($this->db[$key]);//eliminamos el elemento que con el id igual al que recibimos del delete
                 $this->bd = array_values($this->db);//reordena los indices para que sean unicos
                 file_put_contents($this->fileData, json_encode($this->db));
             }
