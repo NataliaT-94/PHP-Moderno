@@ -27,7 +27,17 @@ class Repository implements RepositoryInterface{
             $data['id'] = ((int)$lastElement["id"]) + 1;//luego a la nueva informacion le colocamos el id que le sigue despues del ultimo elemento guardado
         }
         $this->db[] = $data;//por ultimo lo agregamos al array
-        file_put_contents($this->fileData, jron_encode($this->db));//lo guardamos en el archivo db
+        file_put_contents($this->fileData, json_encode($this->db));//lo guardamos en el archivo db
+    }
+
+    public function update($data){
+        foreach ($this->db as $key => $item) {//recorremos sus valores y su key
+            if($item["id"] == $data['id']){//cuando el valor del id de la iteracion es igual al se igual al id de la informacion que recibimos
+                $this->db[$key] = $data;//sustituimos el key por la nueva data que recibimos
+                file_put_contents($this->fileData, json_encode($this->db));
+            }
+        }
+        return false;
     }
 
     public function exists(int $id): bool{
