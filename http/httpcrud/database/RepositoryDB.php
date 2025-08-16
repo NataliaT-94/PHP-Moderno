@@ -10,7 +10,11 @@ class RepositoryDB extends BaseRepository implements RepositoryInterface{
 
     public function get(): array
     {
-        return[];
+        $sql = "SELECT * FROM ".self::TABLE;//query
+        $stmt = $this->pdo->prepare($sql);//preparamos la sentencia
+        $stmt->execute();//ejecutamos
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);//obtenemos informacion, solamente las columna
+        return $data;
     }
     public function exists($id): bool
     {
