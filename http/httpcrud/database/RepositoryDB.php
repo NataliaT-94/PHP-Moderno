@@ -27,7 +27,10 @@ class RepositoryDB extends BaseRepository implements RepositoryInterface{
     }
     public function create($data)
     {
-        
+        $sql = "INSERT INTO ".self::TABLE. "(name, alcohol, idBrand) "
+                ."VALUES (:name, :alcohol, :idBrand)";//mandamos la informacion de forma protegida
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($data);
     }
     public function update($data)
     {
