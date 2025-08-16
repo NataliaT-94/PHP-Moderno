@@ -18,7 +18,12 @@ class RepositoryDB extends BaseRepository implements RepositoryInterface{
     }
     public function exists($id): bool
     {
-        return false;
+        $sql = "SELECT * FROM ".self::TABLE 
+                ." WHERE id = : id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute(['id' => $id]);//protejemos la consulta para que no puedan hacer inyecciones sql 
+        $result = $stmt->rowCount() > 0;
+        return $result;
     }
     public function create($data)
     {
