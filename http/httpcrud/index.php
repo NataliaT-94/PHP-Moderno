@@ -28,7 +28,7 @@ try{
         case 'DELETE':
             $id = $_GET['id'];
             $delete = new Delete($repository);
-            $delete->delete($body);
+            $delete->delete($id);
             break;
         case 'GET':
             $get = new Get($repository);
@@ -50,6 +50,10 @@ try{
 catch(\Exception $e){
     http_response_code(500);//error en el servidor
     echo json_encode(['error' => $e->getMessage()]);
+}
+catch(TypeError $e){
+    http_response_code(400);//error en el servidor
+    echo "Se capturo un TypeError: " . $e->getMessage();
 }
 
 
