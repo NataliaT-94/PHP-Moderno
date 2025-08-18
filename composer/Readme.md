@@ -56,3 +56,11 @@ Do you confirm generation [yes]? yes --pregunta si esta todo bien para poder gen
 
 
 
+# Instalacion de bibliotecas utilizando composer
+--ingresar a ala pagina https://packagist.org/
+
+Elegir la libreria que desea utilizar y luego colocar el comando correspondiente en la consola
+composer require nesbot/carbon
+
+Luego en el codigo colocar el siguiente comando para poder utilizar la libreria
+use Carbon\Carbon;
