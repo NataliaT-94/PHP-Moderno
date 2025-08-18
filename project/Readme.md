@@ -41,3 +41,28 @@ Add PSR-4 autoload mapping? Maps namespace "Natalia\Excel" to the entered relati
 }
 
 Do you confirm generation [yes]? yes
+
+------------------------
+
+# Definimos las carpetas, las cuales van a darnos ese lineamiento de los componentes que va a tener nuestro proyecto.
+
+El objetivo final es crear un proyecto que lea base de datos, la tabla que tenemos de cervezas.
+
+# Business
+A la tabla la vamos a convertir en un archivo de Excel
+
+# Data 
+Vamos a necesitar ir a la base de datos
+
+# Interfaces
+Vamos a necesitar ciertas interfaces para depender de abstracciones
+
+# Excel
+Para un componente que vaya a crear un archivo de Excel. donde vamos hacer la implementacion a excel
+
+# Config
+También necesito cierto proceso de configuración, por ejemplo, las constantes que va a tener la información de la conexión de la base de datos o alguna otra configuración
+
+# Files
+Vamos a generar esos archivos de Excel. Donde vamos a guardar los archivos
+
