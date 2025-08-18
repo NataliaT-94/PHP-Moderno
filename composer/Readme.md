@@ -64,3 +64,8 @@ composer require nesbot/carbon
 
 Luego en el codigo colocar el siguiente comando para poder utilizar la libreria
 use Carbon\Carbon;
+
+
+# Activacion de extensiones de PHP
+
+XAMPP->config->PHP(php.ini) = buscar la extencion requerida y borrar el ; para poder activar la extencion, luego guardar el cambio
