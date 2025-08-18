@@ -66,3 +66,5 @@ También necesito cierto proceso de configuración, por ejemplo, las constantes 
 # Files
 Vamos a generar esos archivos de Excel. Donde vamos a guardar los archivos
 
+------------------------
+Generamos las interfaces, las de obtener informacion get(), create()
