@@ -68,3 +68,12 @@ Vamos a generar esos archivos de Excel. Donde vamos a guardar los archivos
 
 ------------------------
 Generamos las interfaces, las de obtener informacion get(), create()
+
+------------------------
+Creacion del caso de uso: El cual define al proyecto, es un conjunto de eventos que al final este conjunto de eventos hacen. Una acción que te pidió un cliente. 
+
+En este caso  un cliente me pidió ir a la base, ir a una información que está guardada en algún lado y crear un Excel
+
+Uno de los objetivos de la arquitectura de software es tener las reglas de negocio encapsuladas para que puedan funcionar en muchas distintos detalles
+
+En la carpeta business, creamos un archivo generationExcel
