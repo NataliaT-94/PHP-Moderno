@@ -34,11 +34,18 @@ class RepositoryDB extends BaseRepository implements RepositoryInterface{
     }
     public function update($data)
     {
-        
+        $sql = "UPDATE ". self::TABLE." "
+                ."SET name = :name, alcohol = :alcohol, idBrand = :idBrand "
+                ."WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($data);
     }
     public function delete($id)
     {
-        
+        $sql = "UPDATE ". self::TABLE
+                ."WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute(['id' => $id]);
     }
 
 
