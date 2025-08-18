@@ -1,0 +1,16 @@
+{
+    "name": "natalia/excel",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Natalia\\Excel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Natalia T-94",
+            "email": "nattecheira@gmail.com"
+        }
+    ],
+    "require": {}
+}
