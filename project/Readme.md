@@ -76,4 +76,8 @@ En este caso  un cliente me pidió ir a la base, ir a una información que está
 
 Uno de los objetivos de la arquitectura de software es tener las reglas de negocio encapsuladas para que puedan funcionar en muchas distintos detalles
 
-En la carpeta business, creamos un archivo generationExcel
+En la carpeta business, creamos un archivo generatorExcel
+
+----------------
+en la carpeta data, se van a crear el archivo BaseData.php, el cual se encarga de la conexion a la base de datos, mediante un class abstract
+Y un archivo BeerData.php el cual se encarga de recibir la informacion de la base de datos
