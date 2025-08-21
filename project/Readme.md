@@ -114,3 +114,13 @@ Ahí vamos a agregar las referencias a nuestras carpetas.
 la  carpeta config como no contiene clases se agrega de forma diferente
 
 por ultimo en consol a ejecutamos el siguiente comando composer dump-autoload
+
+----------------
+En el archivo index.php, Cargamos el vendor autoload,que es el que va a tener todas las
+
+referencias que hemos agregado, tanto la bibliotecas terceras como la que hace el Excel, como todas nuestras clases que hicimos en esta sección.  
+Lo que sigue es cargar los namespace utilizando el views de PHP.
+
+Despues se obtiene el nombre que va a poner el archivo.
+
+Y por ultimo creamos los objetos encargados de generar y cargar la informacion en el excel 
