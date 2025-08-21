@@ -94,3 +94,23 @@ en la carpeta excel, creamos el archivo CreatorExcel.php, el cual se encarga de 
 ----------------
 
 En la carpeta config creamos el archivo database.php en el cual vamos a definir las constantes que se utilizan para la conexcion de la base de datos
+
+----------------
+Le indicamos a Composer que hemos agregado nuevas carpetas en las cuales tenemos clases.
+Entonces para eso vamos a ir a Composer punto JSON y aquí tenemos un apartado donde dice pc R4.
+
+Ahí vamos a agregar las referencias a nuestras carpetas.
+
+        "psr-4": {
+            "Natalia\\Excel\\": "src/",
+            "app\\interfaces\\": "src/interfaces/",
+            "app\\data\\": "src/data/",
+            "app\\excel\\": "src/excel/",
+            "app\\business\\": "src/business/"             
+        },
+        "files":[
+            "src/config/database.php"
+        ]
+la  carpeta config como no contiene clases se agrega de forma diferente
+
+por ultimo en consol a ejecutamos el siguiente comando composer dump-autoload

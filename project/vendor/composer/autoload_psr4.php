@@ -6,6 +6,10 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'app\\interfaces\\' => array($baseDir . '/src/interfaces'),
+    'app\\excel\\' => array($baseDir . '/src/excel'),
+    'app\\data\\' => array($baseDir . '/src/data'),
+    'app\\business\\' => array($baseDir . '/src/business'),
     'ZipStream\\' => array($vendorDir . '/maennchen/zipstream-php/src'),
     'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-factory/src', $vendorDir . '/psr/http-message/src'),

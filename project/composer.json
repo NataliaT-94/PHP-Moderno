@@ -3,8 +3,15 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Natalia\\Excel\\": "src/"
-        }
+            "Natalia\\Excel\\": "src/",
+            "app\\interfaces\\": "src/interfaces/",
+            "app\\data\\": "src/data/",
+            "app\\excel\\": "src/excel/",
+            "app\\business\\": "src/business/"             
+        },
+        "files":[
+            "src/config/database.php"
+        ]
     },
     "authors": [
         {
