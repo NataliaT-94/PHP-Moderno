@@ -32,7 +32,14 @@ class Session implements RepositoryInterface{
 
     public function update($data)
     {
-
+        $beers = $_SESSION["beers"];
+        
+        foreach($beers as $key => $beer){//recorremos el array
+            if($beer["id"] == $data["id"]){//si existe con un id
+                $beer[$key] == $data;//modificamos la informacion
+            }
+        }
+        $_SESSION["beers"] = $beers;//guardamos la nueva informacion
     }
 
     public function delete($id)
@@ -43,7 +50,7 @@ class Session implements RepositoryInterface{
     public function exists(int $id): bool
     {
         $beers = $_SESSION["beers"];
-        
+
         foreach($beers as $beer){//recorremos el array
             if($beer["id"] == $id){//si existe con un id
                 return true;
