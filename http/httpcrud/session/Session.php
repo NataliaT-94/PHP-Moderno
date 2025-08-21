@@ -42,7 +42,14 @@ class Session implements RepositoryInterface{
 
     public function exists(int $id): bool
     {
+        $beers = $_SESSION["beers"];
         
+        foreach($beers as $beer){//recorremos el array
+            if($beer["id"] == $id){//si existe con un id
+                return true;
+            }
+        }
+        return false;
     }
 
 
