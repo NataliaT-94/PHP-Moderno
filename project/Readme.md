@@ -91,3 +91,6 @@ consola: composer require phpoffice/phpspreadsheet
 
 en la carpeta excel, creamos el archivo CreatorExcel.php, el cual se encarga de crear el archivo excel
 
+----------------
+
+En la carpeta config creamos el archivo database.php en el cual vamos a definir las constantes que se utilizan para la conexcion de la base de datos
