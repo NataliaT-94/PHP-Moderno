@@ -12,5 +12,7 @@
             "email": "nattecheira@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "phpoffice/phpspreadsheet": "^2.1"
+    }
 }

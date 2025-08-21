@@ -81,3 +81,13 @@ En la carpeta business, creamos un archivo generatorExcel
 ----------------
 en la carpeta data, se van a crear el archivo BaseData.php, el cual se encarga de la conexion a la base de datos, mediante un class abstract
 Y un archivo BeerData.php el cual se encarga de recibir la informacion de la base de datos
+
+-----------------
+
+instalacion de biblioteca de creacion de Excel
+consola: composer require phpoffice/phpspreadsheet
+
+----------------
+
+en la carpeta excel, creamos el archivo CreatorExcel.php, el cual se encarga de crear el archivo excel
+
