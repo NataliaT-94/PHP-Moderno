@@ -19,7 +19,15 @@ class Session implements RepositoryInterface{
 
     public function create($data)
     {
-
+        $beers = $_SESSION["beers"];//obtener el array
+        if(count($beers) == 0){//si esta en 0
+            $data['id'] = 1;//le agregamos un id 1
+        }else{//si tiene algo
+            $lastElement = $beers[count($beers) -1];//va al ultimo elemento
+            $data['id'] = ((int)$lastElement["id"]) + 1;//le agrega un id, el cual al ultimo elemento le suma 1
+        }
+        array_push($beers, $data);
+        $_SESSION["beers"] = $beers;//guardamos la nueva informacion
     }
 
     public function update($data)
